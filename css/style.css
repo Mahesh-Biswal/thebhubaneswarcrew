@@ -1525,7 +1525,64 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.96rem;
   line-height: 1.75;
   max-width: 310px;
-  margin: 18px 0 24px;
+  margin: 18px 0 16px;
+}
+
+/* ---- Founder badge in footer ---- */
+.footer-founder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  border-radius: var(--radius-btn);
+  background: rgba(0, 210, 255, 0.08);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  transition: all 0.3s var(--ease-out);
+}
+
+.footer-founder-badge:hover {
+  background: rgba(0, 210, 255, 0.18);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.25);
+}
+
+.founder-badge-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(0, 210, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.founder-badge-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: color 0.3s;
+}
+
+.founder-badge-link img {
+  filter: brightness(0) invert(1);
+}
+
+.founder-inline-link {
+  color: #00D2FF;
+  font-weight: 600;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.founder-inline-link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .social-links {
