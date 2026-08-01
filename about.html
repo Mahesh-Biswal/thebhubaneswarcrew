@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       THE BHUBANESWAR CREW — About Page
+       ============================================================ -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= SEO ================= -->
+  <title>About Us | The Bhubaneswar Crew</title>
+  <meta name="description" content="Meet The Bhubaneswar Crew — a creative podcast and entertainment community from Bhubaneswar, Odisha. Learn about our vision, mission, values and the people behind the mic.">
+  <meta name="keywords" content="about The Bhubaneswar Crew, Bhubaneswar community, podcast creators Odisha, our story, vision mission">
+  <meta name="author" content="The Bhubaneswar Crew">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050505">
+
+  <!-- ================= Open Graph ================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Bhubaneswar Crew">
+  <meta property="og:title" content="About Us | The Bhubaneswar Crew">
+  <meta property="og:description" content="Built by creators, for the city — our vision, mission and the people behind the mic.">
+  <meta property="og:url" content="https://www.thebhubaneswarcrew.in/about.html">
+  <meta property="og:image" content="https://www.thebhubaneswarcrew.in/images/team-1.svg">
+
+  <!-- ================= Twitter Card ================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | The Bhubaneswar Crew">
+  <meta name="twitter:description" content="Built by creators, for the city — our vision, mission and the people behind the mic.">
+  <meta name="twitter:image" content="https://www.thebhubaneswarcrew.in/images/team-1.svg">
+
+  <!-- ================= Favicon ================= -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="favicon/favicon.svg">
+
+  <!-- ================= Google Fonts ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ================= Bootstrap 5 — GRID ONLY ================= -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- ================= Custom Styles ================= -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading The Bhubaneswar Crew">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <img src="favicon/favicon.svg" alt="The Bhubaneswar Crew logo" class="preloader-logo">
+      <p class="preloader-text">The Bhubaneswar Crew</p>
+    </div>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-header" id="siteHeader">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="brand" aria-label="The Bhubaneswar Crew — Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="7,4 7,20 19,12" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">The <em>Bhubaneswar</em> Crew</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="podcasts.html" class="nav-link">Podcasts</a></li>
+        <li><a href="standup.html" class="nav-link">Stand-Up</a></li>
+        <li><a href="quotes.html" class="nav-link">Quotes</a></li>
+        <li><a href="shayari.html" class="nav-link">Shayari</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn-crew btn-sm">Join Community</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <section class="page-hero" aria-label="About The Bhubaneswar Crew">
+      <div class="container-xl">
+        <span class="section-eyebrow" data-animate="fade-up">The crew</span>
+        <h1 class="page-hero-heading" data-animate="fade-up" data-delay="100">
+          One City.<br><span class="gradient-text">Infinite Stories.</span>
+        </h1>
+        <p class="page-hero-desc" data-animate="fade-up" data-delay="200">
+          We are creators, comedians, poets and listeners who believe every
+          voice deserves a stage — and Bhubaneswar deserves to be heard.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VISION & MISSION
+         ============================================================ -->
+    <section class="section" aria-labelledby="vm-heading">
+      <div class="container-xl">
+        <div class="section-head text-center" data-animate="fade-up">
+          <span class="section-eyebrow">Why we exist</span>
+          <h2 class="section-title" id="vm-heading">Vision &amp; Mission</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- Vision -->
+          <div class="col-12 col-lg-6">
+            <article class="feature-card" data-animate="fade-up" tabindex="0">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Our Vision</h3>
+              <p class="feature-text">
+                To make Bhubaneswar a creative capital — a city where art,
+                laughter and honest words are part of everyday life. A city
+                where a student, a software engineer and a tea-stall owner
+                can all share the same mic.
+              </p>
+            </article>
+          </div>
+
+          <!-- Mission -->
+          <div class="col-12 col-lg-6">
+            <article class="feature-card" data-animate="fade-up" data-delay="100" tabindex="0">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Our Mission</h3>
+              <p class="feature-text">
+                To discover and amplify local creators, build open stages for
+                podcasts, comedy and poetry, and grow a community that shows
+                up for each other — one episode, one open mic and one story at a time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VALUES
+         ============================================================ -->
+    <section class="section" aria-labelledby="values-heading">
+      <div class="container-xl">
+        <div class="section-head text-center" data-animate="fade-up">
+          <span class="section-eyebrow">What we stand for</span>
+          <h2 class="section-title" id="values-heading">Our Values</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- Value 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="value-card" data-animate="fade-up" tabindex="0">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+                </svg>
+              </div>
+              <h3 class="value-title">Creativity</h3>
+              <p class="value-text">We chase fresh ideas and original voices over safe and familiar ones.</p>
+            </article>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="value-card" data-animate="fade-up" data-delay="100" tabindex="0">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 class="value-title">Community</h3>
+              <p class="value-text">Everyone has a seat at our table — listeners, first-timers and veterans alike.</p>
+            </article>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="value-card" data-animate="fade-up" data-delay="200" tabindex="0">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <h3 class="value-title">Courage</h3>
+              <p class="value-text">Stepping on stage for the first time is brave. We honour and nurture that bravery.</p>
+            </article>
+          </div>
+
+          <!-- Value 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="value-card" data-animate="fade-up" data-delay="300" tabindex="0">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <h3 class="value-title">Growth</h3>
+              <p class="value-text">We grow together — better episodes, sharper sets and stronger friendships.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TIMELINE / MILESTONES
+         ============================================================ -->
+    <section class="section" aria-labelledby="milestones-heading">
+      <div class="container-xl">
+        <div class="section-head text-center" data-animate="fade-up">
+          <span class="section-eyebrow">The journey</span>
+          <h2 class="section-title" id="milestones-heading">Milestones</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- Milestone 1 -->
+          <div class="timeline-item" data-animate="fade-up">
+            <span class="timeline-year">2021</span>
+            <h3 class="timeline-title">The First Mic</h3>
+            <p class="timeline-text">A few friends record the first episode in a bedroom with a single borrowed microphone.</p>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item" data-animate="fade-up">
+            <span class="timeline-year">2022</span>
+            <h3 class="timeline-title">First Open Mic</h3>
+            <p class="timeline-text">We host our first open mic in a small cafe — 14 performers, endless laughter.</p>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item" data-animate="fade-up">
+            <span class="timeline-year">2023</span>
+            <h3 class="timeline-title">100 Episodes</h3>
+            <p class="timeline-text">The podcast archive crosses 100 episodes with guests from all walks of life.</p>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item" data-animate="fade-up">
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">1000+ Members</h3>
+            <p class="timeline-text">Our community crosses a thousand members across the city and beyond.</p>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="timeline-item" data-animate="fade-up">
+            <span class="timeline-year">Today</span>
+            <h3 class="timeline-title">50+ Events &amp; Counting</h3>
+            <p class="timeline-text">Comedy nights, poetry evenings and community meetups — with plenty more to come.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TEAM
+         ============================================================ -->
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container-xl">
+        <div class="section-head text-center" data-animate="fade-up">
+          <span class="section-eyebrow">The people</span>
+          <h2 class="section-title" id="team-heading">Founding Crew</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- Team 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="team-card" data-animate="fade-up" tabindex="0">
+              <div class="team-avatar">
+                <img src="images/team-1.svg" alt="Portrait of Aakash Kumar, founder and host" loading="lazy">
+              </div>
+              <h3 class="team-name">Aakash Kumar</h3>
+              <span class="team-role">Host &amp; Visionary</span>
+              <p class="team-bio">The voice behind most episodes and the dream that started it all.</p>
+            </article>
+          </div>
+
+          <!-- Team 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="team-card" data-animate="fade-up" data-delay="100" tabindex="0">
+              <div class="team-avatar">
+                <img src="images/team-2.svg" alt="Portrait of Bikram Sahoo, producer and editor" loading="lazy">
+              </div>
+              <h3 class="team-name">Bikram Sahoo</h3>
+              <span class="team-role">Producer &amp; Editor</span>
+              <p class="team-bio">Turns raw conversations into the clean, cinematic sound you love.</p>
+            </article>
+          </div>
+
+          <!-- Team 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="team-card" data-animate="fade-up" data-delay="200" tabindex="0">
+              <div class="team-avatar">
+                <img src="images/team-3.svg" alt="Portrait of Suchismita Pattnaik, community lead" loading="lazy">
+              </div>
+              <h3 class="team-name">Suchismita Pattnaik</h3>
+              <span class="team-role">Community Lead</span>
+              <p class="team-bio">Keeps the crew connected, the events booked and everyone smiling.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CALL TO ACTION
+         ============================================================ -->
+    <section class="section cta-section" aria-labelledby="cta-heading">
+      <div class="container-xl">
+        <div class="cta-card" data-animate="zoom-in">
+          <div class="cta-glow" aria-hidden="true"></div>
+          <span class="section-eyebrow cta-eyebrow">Join us</span>
+          <h2 class="cta-title" id="cta-heading">Grow This Story With Us</h2>
+          <p class="cta-text">
+            Every great community starts with one more person saying yes.
+            We would love for that person to be you.
+          </p>
+          <a href="contact.html" class="btn-crew btn-lg">
+            Join Community
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container-xl">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="brand" aria-label="The Bhubaneswar Crew — Home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <polygon points="7,4 7,20 19,12" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand-text">The <em>Bhubaneswar</em> Crew</span>
+          </a>
+          <p class="footer-blurb">
+            A creative podcast &amp; entertainment community from the heart of
+            Odisha — where voices inspire and stories connect.
+          </p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on Instagram">
+              <img src="images/icons/instagram.svg" alt="Instagram" width="20" height="20">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Subscribe on YouTube">
+              <img src="images/icons/youtube.svg" alt="YouTube" width="20" height="20">
+            </a>
+            <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Listen on Spotify">
+              <img src="images/icons/spotify.svg" alt="Spotify" width="20" height="20">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on Facebook">
+              <img src="images/icons/facebook.svg" alt="Facebook" width="20" height="20">
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="standup.html">Stand-Up</a></li>
+            <li><a href="quotes.html">Quotes</a></li>
+            <li><a href="shayari.html">Shayari</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">The Crew</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#community">Community</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Get in touch</h4>
+          <ul class="footer-links footer-contact">
+            <li>
+              <img src="images/icons/mail.svg" alt="" width="16" height="16" aria-hidden="true">
+              <a href="mailto:hello@thebhubaneswarcrew.in">hello@thebhubaneswarcrew.in</a>
+            </li>
+            <li>
+              <img src="images/icons/location.svg" alt="" width="16" height="16" aria-hidden="true">
+              <span>Bhubaneswar, Odisha, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; <span id="footerYear">2026</span> The Bhubaneswar Crew. All rights reserved.</p>
+        <p class="footer-tagline">Made with <span class="heart" aria-hidden="true">&hearts;</span> in Bhubaneswar</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <img src="images/icons/arrow-up.svg" alt="" width="18" height="18" aria-hidden="true">
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/counter.js"></script>
+</body>
+</html>

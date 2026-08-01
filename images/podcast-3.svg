@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1210"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="0.8" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#22C55E" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="txt3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#FF6B00"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg3)"/>
+  <rect width="800" height="450" fill="url(#glow3)"/>
+  <g fill="#22C55E" opacity="0.5">
+    <circle cx="130" cy="90" r="5"/><circle cx="170" cy="60" r="3"/>
+    <circle cx="210" cy="110" r="4"/><circle cx="260" cy="70" r="3"/>
+    <circle cx="300" cy="120" r="5"/><circle cx="350" cy="80" r="3"/>
+  </g>
+  <text x="120" y="105" font-family="sans-serif" font-size="16" font-weight="600" letter-spacing="4" fill="#A0A0A0">THE BHUBANESWAR CREW</text>
+  <text x="120" y="225" font-family="sans-serif" font-size="42" font-weight="700" fill="url(#txt3)">Ep 03 - Odia</text>
+  <text x="120" y="268" font-family="sans-serif" font-size="42" font-weight="700" fill="url(#txt3)">Soul Beats</text>
+  <text x="120" y="305" font-family="sans-serif" font-size="20" fill="#D9D9D9">Guest: Rituparna Sahu · 42 min</text>
+  <circle cx="640" cy="225" r="52" fill="rgba(255,255,255,0.06)" stroke="rgba(34,197,94,0.5)" stroke-width="2"/>
+  <polygon points="628,203 628,247 668,225" fill="#22C55E"/>
+</svg>

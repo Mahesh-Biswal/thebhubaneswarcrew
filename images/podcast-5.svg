@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#100a14"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow5" cx="0.7" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#FF3CAC" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FF3CAC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="txt5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF3CAC"/>
+      <stop offset="1" stop-color="#9A3CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg5)"/>
+  <rect width="800" height="450" fill="url(#glow5)"/>
+  <g fill="#FF3CAC" opacity="0.6">
+    <path d="M160 300 Q210 200 260 300 Q310 200 360 300" fill="none" stroke="#FF3CAC" stroke-width="6" stroke-linecap="round"/>
+    <path d="M420 300 Q470 230 520 300" fill="none" stroke="#9A3CFF" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="120" y="105" font-family="sans-serif" font-size="16" font-weight="600" letter-spacing="4" fill="#A0A0A0">THE BHUBANESWAR CREW</text>
+  <text x="120" y="225" font-family="sans-serif" font-size="42" font-weight="700" fill="url(#txt5)">Ep 05 - Laugh</text>
+  <text x="120" y="268" font-family="sans-serif" font-size="42" font-weight="700" fill="url(#txt5)">Lines</text>
+  <text x="120" y="305" font-family="sans-serif" font-size="20" fill="#D9D9D9">Guest: Sushmita Das · 51 min</text>
+  <circle cx="640" cy="225" r="52" fill="rgba(255,255,255,0.06)" stroke="rgba(255,60,172,0.5)" stroke-width="2"/>
+  <polygon points="628,203 628,247 668,225" fill="#FF3CAC"/>
+</svg>

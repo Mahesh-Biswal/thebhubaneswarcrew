@@ -1,0 +1,187 @@
+/* ============================================================
+   THE BHUBANESWAR CREW — Animations Stylesheet
+   ------------------------------------------------------------
+   Contents:
+   01. Scroll-reveal system (Intersection Observer states)
+   02. Reusable keyframes (spin, pulse, float, scroll wheel...)
+   03. Ambient background animations (blobs, shapes)
+   04. Animated gradient text
+   05. Interactive hover micro-animations (button sheen)
+   ============================================================ */
+
+/* ============================================================
+   01. SCROLL-REVEAL SYSTEM
+   ------------------------------------------------------------
+   Elements with a `data-animate` attribute start hidden (only
+   when JS is available — `.js` class on <html>) and are revealed
+   by js/animation.js which adds `.is-visible`.
+
+   data-animate values:
+     fade-up     -> fades in + slides up
+     fade-in     -> fades in only
+     zoom-in     -> fades in + scales up from 92%
+     slide-left  -> fades in + slides in from the left
+     slide-right -> fades in + slides in from the right
+
+   data-delay (ms) is applied through the --anim-delay variable.
+   ============================================================ */
+html.js [data-animate] {
+  opacity: 0;
+  transition:
+    opacity 0.8s var(--ease-out),
+    transform 0.8s var(--ease-out);
+  transition-delay: var(--anim-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+html.js [data-animate="fade-up"]   { transform: translateY(44px); }
+html.js [data-animate="fade-in"]   { transform: none; }
+html.js [data-animate="zoom-in"]   { transform: scale(0.92); }
+html.js [data-animate="slide-left"]  { transform: translateX(-48px); }
+html.js [data-animate="slide-right"] { transform: translateX(48px); }
+
+html.js [data-animate].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   02. REUSABLE KEYFRAMES
+   ============================================================ */
+
+/* Continuous rotation (preloader ring, about orb) */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Soft pulsing of the preloader logo */
+@keyframes preloaderPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
+
+/* Pulsing "live" indicator dot in the hero badge */
+@keyframes livePulse {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%      { transform: scale(1.5);  opacity: 0.55; }
+}
+
+/* Wheel dot travelling down the hero scroll mouse */
+@keyframes scrollWheel {
+  0%        { opacity: 1; transform: translateY(0); }
+  70%       { opacity: 0; transform: translateY(14px); }
+  100%      { opacity: 0; transform: translateY(14px); }
+}
+
+/* Gentle heartbeat for the footer heart icon */
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  15%      { transform: scale(1.25); }
+  30%      { transform: scale(1); }
+  45%      { transform: scale(1.2); }
+}
+
+/* Slow drifting motion for background gradient blobs */
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(34px, -26px) scale(1.08); }
+  66%      { transform: translate(-24px, 22px) scale(0.94); }
+}
+
+/* Gentle up-and-down bobbing for floating shapes */
+@keyframes floatShape {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-24px); }
+}
+
+/* Soft shimmering of a glow behind the about panel */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4;  transform: scale(1); }
+  50%      { opacity: 0.65; transform: scale(1.08); }
+}
+
+/* ============================================================
+   03. AMBIENT BACKGROUND ANIMATIONS
+   ============================================================ */
+
+/* Animated gradient blobs (hero) */
+.blob {
+  animation: blobFloat 14s ease-in-out infinite;
+}
+
+.blob-one {
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.blob-two {
+  animation-duration: 16s;
+  animation-delay: 2s;
+}
+
+.blob-three {
+  animation-duration: 11s;
+  animation-delay: 1s;
+}
+
+/* Floating glowing circles (hero) */
+.float-shape {
+  animation: floatShape 6s ease-in-out infinite;
+}
+
+.fs-1 { animation-duration: 5s;   animation-delay: 0s; }
+.fs-2 { animation-duration: 7s;   animation-delay: 0.6s; }
+.fs-3 { animation-duration: 6s;   animation-delay: 1.2s; }
+.fs-4 { animation-duration: 5.5s; animation-delay: 0.3s; }
+.fs-5 { animation-duration: 8s;   animation-delay: 0.9s; }
+.fs-6 { animation-duration: 6.5s; animation-delay: 1.5s; }
+
+/* Soft pulsing glow behind the About panel */
+.about-glow {
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+/* ============================================================
+   04. ANIMATED GRADIENT TEXT
+   ------------------------------------------------------------
+   The accent gradient slowly shifts its position so the
+   headline/stat gradients feel alive.
+   ============================================================ */
+.gradient-text {
+  background-size: 200% auto;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50%      { background-position: 100% center; }
+}
+
+/* ============================================================
+   05. INTERACTIVE HOVER MICRO-ANIMATIONS
+   ============================================================ */
+
+/* Sheen sweep across the primary button on hover */
+.btn-crew {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-crew::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: translateX(-170%) skewX(-20deg);
+  transition: transform 0.6s var(--ease-out);
+  pointer-events: none;
+}
+
+.btn-crew:hover::after {
+  transform: translateX(260%) skewX(-20deg);
+}

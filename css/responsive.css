@@ -1,0 +1,357 @@
+/* ============================================================
+   THE BHUBANESWAR CREW — Responsive Stylesheet
+   ------------------------------------------------------------
+   Order of breakpoints (mobile-first adjustments applied
+   top-down; base styles live in style.css):
+   01. Large screens   (min-width 1400px)
+   02. Laptop / tablet (max-width 1199px)
+   03. Tablet / mobile menu  (max-width 991px)
+   04. Small tablets   (max-width 767px)
+   05. Mobile          (max-width 575px)
+   06. Tiny screens    (max-width 380px)
+   07. Touch devices   (hover:none) — cursor glow off
+   08. Short screens   (max-height) — hide scroll cue
+   ============================================================ */
+
+/* ============================================================
+   01. LARGE SCREENS
+   ============================================================ */
+@media (min-width: 1400px) {
+  .hero-heading {
+    font-size: 5rem;
+  }
+
+  .hero-content {
+    max-width: 980px;
+  }
+
+  .section {
+    padding: 140px 0;
+  }
+}
+
+/* ============================================================
+   02. LAPTOP / TABLET
+   ============================================================ */
+@media (max-width: 1199px) {
+  .nav-links {
+    gap: 22px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.6fr 1fr 1fr;
+  }
+
+  /* Contact column moves to a second row and spans full width */
+  .footer-col:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================================
+   03. TABLET & MOBILE MENU OVERLAY
+   ------------------------------------------------------------
+   Below 992px the desktop menu is replaced by a full-screen
+   overlay menu. The hamburger (in the header) toggles a
+   `.menu-open` class on <body> via js/navbar.js.
+   ============================================================ */
+@media (max-width: 991px) {
+  /* ---- Header ---- */
+  .site-nav {
+    padding: 0 20px;
+  }
+
+  /* Show hamburger, hide CTA + desktop links */
+  .menu-toggle {
+    display: grid;
+  }
+
+  .nav-actions .btn-crew {
+    display: none;
+  }
+
+  /* The links become a fixed full-screen overlay */
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    z-index: 990; /* sits below the header so the brand stays visible */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    padding: 90px 24px 40px;
+    background: rgba(5, 5, 5, 0.96);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    transform: translateY(-102%);
+    visibility: hidden;
+    transition: transform 0.5s var(--ease-out), visibility 0.5s;
+  }
+
+  /* Slide the overlay in when the menu is open */
+  body.menu-open .nav-links {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  /* Always give the header a solid blurred backdrop in overlay mode */
+  body.menu-open .site-header {
+    background: rgba(5, 5, 5, 0.72);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+  }
+
+  /* Larger, staggered links inside the overlay */
+  .nav-links .nav-link {
+    font-size: 1.6rem;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s var(--ease-out), color 0.3s;
+  }
+
+  body.menu-open .nav-links .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger the reveal of each link */
+  body.menu-open .nav-links li:nth-child(1) .nav-link { transition-delay: 0.08s; }
+  body.menu-open .nav-links li:nth-child(2) .nav-link { transition-delay: 0.14s; }
+  body.menu-open .nav-links li:nth-child(3) .nav-link { transition-delay: 0.20s; }
+  body.menu-open .nav-links li:nth-child(4) .nav-link { transition-delay: 0.26s; }
+  body.menu-open .nav-links li:nth-child(5) .nav-link { transition-delay: 0.32s; }
+  body.menu-open .nav-links li:nth-child(6) .nav-link { transition-delay: 0.38s; }
+  body.menu-open .nav-links li:nth-child(7) .nav-link { transition-delay: 0.44s; }
+
+  /* Rotate hamburger into an X when open */
+  body.menu-open .menu-toggle svg {
+    transform: rotate(90deg);
+    transition: transform 0.3s var(--ease-out);
+  }
+
+  /* ---- Sections ---- */
+  .section {
+    padding: 90px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ============================================================
+   04. SMALL TABLETS
+   ============================================================ */
+@media (max-width: 767px) {
+  .section {
+    padding: 76px 0;
+  }
+
+  .section-head {
+    margin-bottom: 42px;
+  }
+
+  /* Center all section heads on mobile */
+  .section-head:not(.text-center) {
+    text-align: center;
+  }
+
+  /* Smaller hero blobs so they do not overflow the viewport */
+  .blob-one { width: 360px; height: 360px; }
+  .blob-two { width: 380px; height: 380px; }
+  .blob-three { width: 260px; height: 260px; }
+
+  /* Fewer floating shapes on small screens */
+  .float-shape.fs-3,
+  .float-shape.fs-5,
+  .float-shape.fs-6 {
+    display: none;
+  }
+
+  .hero-content {
+    padding-bottom: 110px;
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+
+  .cta-card {
+    padding: 64px 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   05. MOBILE
+   ============================================================ */
+@media (max-width: 575px) {
+  /* Keep the brand readable on narrow screens */
+  .brand {
+    font-size: 1rem;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-actions .btn-crew,
+  .hero-actions .btn-ghost {
+    width: 100%;
+  }
+
+  /* Features, podcasts, performers: switch to a single column */
+  .row.g-4 > [class*="col-"] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .feature-card,
+  .quote-card,
+  .shayari-card {
+    padding: 28px 24px;
+  }
+
+  .about-visual {
+    min-height: 360px;
+  }
+
+  .about-panel {
+    padding: 34px 26px;
+  }
+
+  .about-orb {
+    width: 110px;
+    height: 110px;
+    right: 0;
+    top: 0;
+  }
+
+  .testimonial-card {
+    padding: 40px 12px 16px;
+  }
+
+  .testimonial-text {
+    font-size: 1.05rem;
+  }
+
+  .back-to-top {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  /* Reduce hero top padding on small phones with a notch */
+  .hero-content {
+    padding-top: calc(var(--nav-height) + 44px);
+  }
+}
+
+/* ============================================================
+   06. TINY SCREENS
+   ============================================================ */
+@media (max-width: 380px) {
+  .hero-heading {
+    font-size: 2.3rem;
+  }
+
+  .nav-links .nav-link {
+    font-size: 1.4rem;
+  }
+
+  .stat-item {
+    padding: 34px 12px;
+  }
+}
+
+/* ============================================================
+   07. TOUCH DEVICES — disable mouse-only effects
+   ============================================================ */
+@media (hover: none), (pointer: coarse) {
+  /* No cursor glow on touch screens */
+  .cursor-glow {
+    display: none;
+  }
+
+  /* Make play buttons visible without hover */
+  .play-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(5, 5, 5, 0.55), transparent 60%);
+  }
+}
+
+/* ============================================================
+   08. SHORT SCREENS — hide the hero scroll cue
+   ============================================================ */
+@media (max-height: 600px) {
+  .scroll-cue {
+    display: none;
+  }
+}
+
+/* ============================================================
+   09. REDUCED MOTION — respect user accessibility preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+}
+
+/* ============================================================
+   10. INNER PAGES — responsive tweaks
+   ============================================================ */
+@media (max-width: 767px) {
+  .page-hero {
+    padding: calc(var(--nav-height) + 70px) 0 60px;
+  }
+
+  /* Single-column contact form on small screens */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-form-card {
+    padding: 30px 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .show-card .btn-crew,
+  .show-card .btn-ghost {
+    width: auto;
+  }
+
+  .cta-card .btn-crew.btn-lg {
+    width: 100%;
+    max-width: 320px;
+  }
+}

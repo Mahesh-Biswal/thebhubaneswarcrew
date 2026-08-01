@@ -1,0 +1,12 @@
+# robots.txt — The Bhubaneswar Crew
+# Allow all search engines to crawl the entire site.
+
+User-agent: *
+Allow: /
+
+# Disallow the assets folder from being indexed as standalone pages
+Disallow: /images/
+Disallow: /assets/
+
+# Primary sitemap location
+Sitemap: https://www.thebhubaneswarcrew.in/sitemap.xml

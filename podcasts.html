@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       THE BHUBANESWAR CREW — Podcasts Page
+       ============================================================ -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= SEO ================= -->
+  <title>Podcasts | The Bhubaneswar Crew</title>
+  <meta name="description" content="Browse all podcast episodes from The Bhubaneswar Crew — conversations, storytelling, music and comedy with local and visiting creators.">
+  <meta name="keywords" content="Bhubaneswar podcasts, Odia podcast, podcast episodes, conversations, storytelling, The Bhubaneswar Crew">
+  <meta name="author" content="The Bhubaneswar Crew">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050505">
+
+  <!-- ================= Open Graph ================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Bhubaneswar Crew">
+  <meta property="og:title" content="Podcasts | The Bhubaneswar Crew">
+  <meta property="og:description" content="Voices that inspire. Stories that connect. Browse every episode.">
+  <meta property="og:url" content="https://www.thebhubaneswarcrew.in/podcasts.html">
+  <meta property="og:image" content="https://www.thebhubaneswarcrew.in/images/podcast-1.svg">
+
+  <!-- ================= Twitter Card ================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Podcasts | The Bhubaneswar Crew">
+  <meta name="twitter:description" content="Voices that inspire. Stories that connect. Browse every episode.">
+  <meta name="twitter:image" content="https://www.thebhubaneswarcrew.in/images/podcast-1.svg">
+
+  <!-- ================= Favicon ================= -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="favicon/favicon.svg">
+
+  <!-- ================= Google Fonts ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ================= Bootstrap 5 — GRID ONLY ================= -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- ================= Custom Styles ================= -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading The Bhubaneswar Crew">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <img src="favicon/favicon.svg" alt="The Bhubaneswar Crew logo" class="preloader-logo">
+      <p class="preloader-text">The Bhubaneswar Crew</p>
+    </div>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-header" id="siteHeader">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="brand" aria-label="The Bhubaneswar Crew — Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <polygon points="7,4 7,20 19,12" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">The <em>Bhubaneswar</em> Crew</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="podcasts.html" class="nav-link">Podcasts</a></li>
+        <li><a href="standup.html" class="nav-link">Stand-Up</a></li>
+        <li><a href="quotes.html" class="nav-link">Quotes</a></li>
+        <li><a href="shayari.html" class="nav-link">Shayari</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn-crew btn-sm">Join Community</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <section class="page-hero" aria-label="Podcasts">
+      <div class="container-xl">
+        <span class="section-eyebrow" data-animate="fade-up">Listen in</span>
+        <h1 class="page-hero-heading" data-animate="fade-up" data-delay="100">
+          Podcast <span class="gradient-text">Archive</span>
+        </h1>
+        <p class="page-hero-desc" data-animate="fade-up" data-delay="200">
+          Deep conversations, hidden stories and honest laughs — a growing
+          library of episodes recorded right here in Bhubaneswar.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EPISODE GALLERY WITH FILTER
+         ============================================================ -->
+    <section class="section" aria-labelledby="episodes-heading">
+      <div class="container-xl">
+
+        <!-- Filter chips (wired up by the script at the bottom) -->
+        <div class="filter-bar" role="group" aria-label="Filter episodes by category">
+          <button class="filter-chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" data-filter="conversations" aria-pressed="false">Conversations</button>
+          <button class="filter-chip" data-filter="storytelling" aria-pressed="false">Storytelling</button>
+          <button class="filter-chip" data-filter="music" aria-pressed="false">Music</button>
+          <button class="filter-chip" data-filter="comedy" aria-pressed="false">Comedy</button>
+        </div>
+
+        <div class="row g-4" id="episodeGrid">
+          <h2 class="visually-hidden" id="episodes-heading">Podcast episodes</h2>
+
+          <!-- Episode 1 -->
+          <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="conversations">
+            <article class="podcast-card">
+              <div class="podcast-thumb" tabindex="0" role="button" aria-label="Play episode: First Mic — From Bedroom to Podcast">
+                <img src="images/podcast-1.svg" alt="Cover art for episode First Mic" loading="lazy">
+                <span class="play-overlay" aria-hidden="true">
+                  <span class="play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6,4 20,12 6,20"/></svg>
+                  </span>
+                </span>
+              </div>
+              <div class="podcast-body">
+                <span class="episode-tag">Episode 01</span>
+                <h3 class="podcast-title">First Mic: From Bedroom to Podcast</h3>
+                <p class="podcast-guest">Guest: Sana Rout</p>
+                <div class="podcast-meta">
+                  <span class="duration">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    48 min
+                  </span>
+                  <span class="episode-cat">Conversations</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Episode 2 -->
+          <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="storytelling">
+            <article class="podcast-card">
+              <div class="podcast-thumb" tabindex="0" role="button" aria-label="Play episode: City of Stories — Hidden Narratives">
+                <img src="images/podcast-2.svg" alt="Cover art for episode City of Stories" loading="lazy">
+                <span class="play-overlay" aria-hidden="true">
+                  <span class="play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6,4 20,12 6,20"/></svg>
+                  </span>
+                </span>
+              </div>
+              <div class="podcast-body">
+                <span class="episode-tag">Episode 02</span>
+                <h3 class="podcast-title">City of Stories: Hidden Narratives</h3>
+                <p class="podcast-guest">Guest: Arjun Panda</p>
+                <div class="podcast-meta">
+                  <span class="duration">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    55 min
+                  </span>
+                  <span class="episode-cat">Storytelling</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Episode 3 -->
+          <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="music">
+            <article class="podcast-card">
+              <div class="podcast-thumb" tabindex="0" role="button" aria-label="Play episode: Odia Soul Beats — Music and Memories">
+                <img src="images/podcast-3.svg" alt="Cover art for episode Odia Soul Beats" loading="lazy">
+                <span class="play-overlay" aria-hidden="true">
+                  <span class="play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6,4 20,12 6,20"/></svg>
+                  </span>
+                </span>
+              </div>
+              <div class="podcast-body">
+                <span class="episode-tag">Episode 03</span>
+                <h3 class="podcast-title">Odia Soul Beats: Music &amp; Memories</h3>
+                <p class="podcast-guest">Guest: Rituparna Sahu</p>
+                <div class="podcast-meta">
+                  <span class="duration">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    42 min
+                  </span>
+                  <span class="episode-cat">Music</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Episode 4 -->
+          <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="conversations">
+            <article class="podcast-card">
+              <div class="podcast-thumb" tabindex="0" role="button" aria-label="Play episode: Chai and Choices">
+                <img src="images/podcast-4.svg" alt="Cover art for episode Chai and Choices" loading="lazy">
+                <span class="play-overlay" aria-hidden="true">
+                  <span class="play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6,4 20,12 6,20"/></svg>
+                  </span>
+                </span>
+              </div>
+              <div class="podcast-body">
+                <span class="episode-tag">Episode 04</span>
+                <h3 class="podcast-title">Chai &amp; Choices</h3>
+                <p class="podcast-guest">Guest: Manoj Behera</p>
+                <div class="podcast-meta">
+                  <span class="duration">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    38 min
+                  </span>
+                  <span class="episode-cat">Conversations</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Episode 5 -->
+          <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="comedy">
+            <article class="podcast-card">
+              <div class="podcast-thumb" tabindex="0" role="button" aria-label="Play episode: Laugh Lines — Comedy Writing">
+                <img src="images/podcast-5.svg" alt="Cover art for episode Laugh Lines" loading="lazy">
+                <span class="play-overlay" aria-hidden="true">
+                  <span class="play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6,4 20,12 6,20"/></svg>
+                  </span>
+                </span>
+              </div>
+              <div class="podcast-body">
+                <span class="episode-tag">Episode 05</span>
+                <h3 class="podcast-title">Laugh Lines: Comedy Writing</h3>
+                <p class="podcast-guest">Guest: Sushmita Das</p>
+                <div class="podcast-meta">
+                  <span class="duration">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    51 min
+                  </span>
+                  <span class="episode-cat">Comedy</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Episode 6 -->
+          <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="storytelling">
+            <article class="podcast-card">
+              <div class="podcast-thumb" tabindex="0" role="button" aria-label="Play episode: Roots and Rituals">
+                <img src="images/podcast-6.svg" alt="Cover art for episode Roots and Rituals" loading="lazy">
+                <span class="play-overlay" aria-hidden="true">
+                  <span class="play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6,4 20,12 6,20"/></svg>
+                  </span>
+                </span>
+              </div>
+              <div class="podcast-body">
+                <span class="episode-tag">Episode 06</span>
+                <h3 class="podcast-title">Roots &amp; Rituals</h3>
+                <p class="podcast-guest">Guest: Priyanka Nayak</p>
+                <div class="podcast-meta">
+                  <span class="duration">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    47 min
+                  </span>
+                  <span class="episode-cat">Storytelling</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CALL TO ACTION
+         ============================================================ -->
+    <section class="section cta-section" aria-labelledby="cta-heading">
+      <div class="container-xl">
+        <div class="cta-card" data-animate="zoom-in">
+          <div class="cta-glow" aria-hidden="true"></div>
+          <span class="section-eyebrow cta-eyebrow">Have a story?</span>
+          <h2 class="cta-title" id="cta-heading">Be a Guest on the Show</h2>
+          <p class="cta-text">
+            If you have a story, a talent or a perspective to share, the mic
+            is always open. Pitch yourself to the crew today.
+          </p>
+          <a href="contact.html" class="btn-crew btn-lg">
+            Pitch Us
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container-xl">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="brand" aria-label="The Bhubaneswar Crew — Home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <polygon points="7,4 7,20 19,12" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand-text">The <em>Bhubaneswar</em> Crew</span>
+          </a>
+          <p class="footer-blurb">
+            A creative podcast &amp; entertainment community from the heart of
+            Odisha — where voices inspire and stories connect.
+          </p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on Instagram">
+              <img src="images/icons/instagram.svg" alt="Instagram" width="20" height="20">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Subscribe on YouTube">
+              <img src="images/icons/youtube.svg" alt="YouTube" width="20" height="20">
+            </a>
+            <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Listen on Spotify">
+              <img src="images/icons/spotify.svg" alt="Spotify" width="20" height="20">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow us on Facebook">
+              <img src="images/icons/facebook.svg" alt="Facebook" width="20" height="20">
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="standup.html">Stand-Up</a></li>
+            <li><a href="quotes.html">Quotes</a></li>
+            <li><a href="shayari.html">Shayari</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">The Crew</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#community">Community</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Get in touch</h4>
+          <ul class="footer-links footer-contact">
+            <li>
+              <img src="images/icons/mail.svg" alt="" width="16" height="16" aria-hidden="true">
+              <a href="mailto:hello@thebhubaneswarcrew.in">hello@thebhubaneswarcrew.in</a>
+            </li>
+            <li>
+              <img src="images/icons/location.svg" alt="" width="16" height="16" aria-hidden="true">
+              <span>Bhubaneswar, Odisha, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; <span id="footerYear">2026</span> The Bhubaneswar Crew. All rights reserved.</p>
+        <p class="footer-tagline">Made with <span class="heart" aria-hidden="true">&hearts;</span> in Bhubaneswar</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <img src="images/icons/arrow-up.svg" alt="" width="18" height="18" aria-hidden="true">
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/counter.js"></script>
+
+  <!-- ============================================================
+       EPISODE FILTER SCRIPT
+       Hides/shows gallery items based on the selected category.
+       ============================================================ -->
+  <script>
+    (function ($) {
+      'use strict';
+
+      $('#episodeGrid').on('click', '.gallery-item .podcast-thumb', function () {
+        /* Play button behaviour can be wired here later
+           (e.g. connect to the future audio player). */
+      });
+
+      $('.filter-chip').on('click', function () {
+        var filter = $(this).attr('data-filter');
+
+        /* Highlight the selected chip */
+        $('.filter-chip').removeClass('is-active').attr('aria-pressed', 'false');
+        $(this).addClass('is-active').attr('aria-pressed', 'true');
+
+        /* Toggle every episode card */
+        $('#episodeGrid .gallery-item').each(function () {
+          var category = $(this).attr('data-category');
+          var shouldShow = (filter === 'all' || category === filter);
+          $(this).toggleClass('is-hidden', !shouldShow);
+        });
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>
