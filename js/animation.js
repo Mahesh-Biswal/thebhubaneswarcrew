@@ -142,7 +142,7 @@
     var running = true;
 
     /* Particle / line colour — derived from the brand accents */
-    var COLORS = ['rgba(255,107,0,', 'rgba(255,60,172,', 'rgba(160,160,160,'];
+    var COLORS = ['rgba(0,210,255,', 'rgba(59,130,246,', 'rgba(125,211,252,'];
     var LINK_DISTANCE = 130;
     var MOUSE_RADIUS = 150;
 
@@ -217,7 +217,7 @@
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = 'rgba(255, 107, 0, ' + alpha + ')';
+            ctx.strokeStyle = 'rgba(0, 210, 255, ' + alpha + ')';
             ctx.lineWidth = 1;
             ctx.stroke();
           }

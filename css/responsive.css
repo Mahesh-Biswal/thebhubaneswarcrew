@@ -205,7 +205,7 @@
   .brand-mark {
     width: 34px;
     height: 34px;
-    border-radius: 10px;
+    border-radius: 50%;
   }
 
   .hero-actions {
